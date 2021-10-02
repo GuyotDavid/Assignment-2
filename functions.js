@@ -19,8 +19,13 @@ Array.prototype.myFilter = function() {
 };
 
 // SOME //
-Array.prototype.mySome = function() {
+Array.prototype.mySome = function() 
+{
+  for (let i = 0 ; i < this.length; i++)
+  {
 
+  }
+  return false;
 };
 
 // EVERY //
