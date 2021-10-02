@@ -57,9 +57,10 @@ Array.prototype.myIncludes = function(element)
 }
 
 // INDEXOF //
-Array.prototype.myIndexOf = function() {
+Array.prototype.myIndexOf = function(element) 
+{
 
-};
+}
 
 // PUSH //
 Array.prototype.myPush = function() 
