@@ -27,12 +27,18 @@ Array.prototype.mySome = function(element)
       return true;
   }
   return false;
-};
+}
 
 // EVERY //
-Array.prototype.myEvery = function() {
-
-};
+Array.prototype.myEvery = function(element) 
+{
+  for (let i = 0; i < this.length; i++)
+  {
+    if (!element(this[i])
+        return false;
+  }
+  return true;
+}
 
 // REDUCE //
 Array.prototype.myReduce = function() {
