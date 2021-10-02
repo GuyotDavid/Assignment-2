@@ -19,11 +19,12 @@ Array.prototype.myFilter = function() {
 };
 
 // SOME //
-Array.prototype.mySome = function() 
+Array.prototype.mySome = function(element) 
 {
   for (let i = 0 ; i < this.length; i++)
   {
-
+    if (element(this[i]))
+      return true;
   }
   return false;
 };
