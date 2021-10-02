@@ -1,10 +1,12 @@
 // FOR EACH //
-Array.prototype.myEach = function(callBack) {
-  for (let i = 0; i < this.length; i++){
+Array.prototype.myEach = function(callBack) 
+{
+  for (let i = 0; i < this.length; i++)
+  {
     if (this[i] === undefined) continue;
     callBack (this[i], i, this);
   }
-};
+}
 
 // MAP //
 Array.prototype.myMap = function() {
@@ -42,9 +44,17 @@ Array.prototype.myIndexOf = function() {
 };
 
 // PUSH //
-Array.prototype.myPush = function() {
-
-};
+Array.prototype.myPush = function() 
+{
+  let arg_i = 0;
+  let length = this.length;
+  for (let i = length; i < length + args.length; i++)
+  {
+    this[i] = args[arg_i];
+    arg_i++;
+  }
+  return this.length;
+}
 
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function() {
