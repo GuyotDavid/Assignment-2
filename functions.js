@@ -68,7 +68,7 @@ Array.prototype.myIndexOf = function(element)
 }
 
 // PUSH //
-Array.prototype.myPush = function() 
+Array.prototype.myPush = function(...args) 
 {
   let arg_i = 0;
   let length = this.length;
