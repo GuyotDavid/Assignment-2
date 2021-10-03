@@ -1,5 +1,3 @@
-const arr = [1, 2, 3,7,3];
-
 // FOR EACH //
 Array.prototype.myEach = function(callBack) 
 {
@@ -102,8 +100,3 @@ Object.grabKeys = function() {
 Object.grabValues = function() {
 
 };
-
-//TEST
-const high = (element) => element > 6
-console.log(arr.myEvery(high));
-console.log(arr.every(high));
