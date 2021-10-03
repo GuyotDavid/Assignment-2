@@ -34,7 +34,7 @@ Array.prototype.myEvery = function(element)
 {
   for (let i = 0; i < this.length; i++)
   {
-    if (!element(this[i])
+    if (!element(this[i]))
         return false;
   }
   return true;
