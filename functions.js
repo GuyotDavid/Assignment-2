@@ -1,3 +1,5 @@
+const arr = [1, 2, 3,7,3];
+
 // FOR EACH //
 Array.prototype.myEach = function(callBack) 
 {
@@ -34,7 +36,7 @@ Array.prototype.myEvery = function(element)
 {
   for (let i = 0; i < this.length; i++)
   {
-    if (!element(this[i])
+    if (!element(this[i]))
         return false;
   }
   return true;
@@ -68,7 +70,7 @@ Array.prototype.myIndexOf = function(element)
 }
 
 // PUSH //
-Array.prototype.myPush = function() 
+Array.prototype.myPush = function(...args) 
 {
   let arg_i = 0;
   let length = this.length;
@@ -100,3 +102,8 @@ Object.grabKeys = function() {
 Object.grabValues = function() {
 
 };
+
+//TEST
+const high = (element) => element > 6
+console.log(arr.myEvery(high));
+console.log(arr.every(high));
