@@ -81,9 +81,15 @@ Array.prototype.myPush = function()
 }
 
 // LASTINDEXOF //
-Array.prototype.myLastIndexOf = function() {
-
-};
+Array.prototype.myLastIndexOf = function(element) 
+{
+  for (let i = this.length; i > 0; i--)
+  {
+    if (this[i] === element)
+      return i;
+  }
+  return -1;
+}
 
 // KEYS //
 Object.grabKeys = function() {
