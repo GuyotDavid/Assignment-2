@@ -17,8 +17,12 @@ Array.prototype.myMap = function(callback) {
 };
 
 // FILTER //
-Array.prototype.myFilter = function() {
-
+Array.prototype.myFilter = function(callback) {
+  var filtered = [];
+  for(let i = 0; i < this.length; i++) {
+    if (callback(this[i], i, this)) filtered.push(this[i]);
+  }
+  return filtered;
 };
 
 // SOME //
