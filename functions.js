@@ -106,8 +106,12 @@ Array.prototype.myLastIndexOf = function(element)
 }
 
 // KEYS //
-Object.grabKeys = function() {
-
+Object.grabKeys = function(object) {
+  arr = [];
+  for (let key in object) {
+    arr.push(key);
+  }
+  return arr;
 };
 
 // VALUES //
