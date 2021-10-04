@@ -115,6 +115,10 @@ Object.grabKeys = function(object) {
 };
 
 // VALUES //
-Object.grabValues = function() {
-
+Object.grabValues = function(object) {
+  let arr = [];
+  for (let key in object) {
+    arr.push(object[key]);
+  }
+  return arr;
 };
