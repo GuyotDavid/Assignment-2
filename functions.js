@@ -9,13 +9,20 @@ Array.prototype.myEach = function(callBack)
 }
 
 // MAP //
-Array.prototype.myMap = function() {
-
+Array.prototype.myMap = function(callback) {
+  arr = [];
+  for (var i = 0; i < this.length; i++)
+    arr.push(callback(this[i], i, this));
+  return arr;
 };
 
 // FILTER //
-Array.prototype.myFilter = function() {
-
+Array.prototype.myFilter = function(callback) {
+  var filtered = [];
+  for(let i = 0; i < this.length; i++) {
+    if (callback(this[i], i, this)) filtered.push(this[i]);
+  }
+  return filtered;
 };
 
 // SOME //
@@ -35,14 +42,21 @@ Array.prototype.myEvery = function(element)
   for (let i = 0; i < this.length; i++)
   {
     if (!element(this[i]))
-        return false;
+      return false;
   }
   return true;
 }
 
 // REDUCE //
-Array.prototype.myReduce = function() {
-
+Array.prototype.myReduce = function(callback, initialVal) {
+  var accumulator = (initialVal === undefined) ? undefined : initialVal;
+  for (var i = 0; i < this.length; i++) {
+    if (accumulator !== undefined)
+      accumulator = callback.call(undefined, accumulator, this[i], i, this);
+    else
+      accumulator = this[i];
+  }
+  return accumulator;
 };
 
 // INCLUDES //
@@ -92,11 +106,19 @@ Array.prototype.myLastIndexOf = function(element)
 }
 
 // KEYS //
-Object.grabKeys = function() {
-
+Object.grabKeys = function(object) {
+  arr = [];
+  for (let key in object) {
+    arr.push(key);
+  }
+  return arr;
 };
 
 // VALUES //
-Object.grabValues = function() {
-
+Object.grabValues = function(object) {
+  let arr = [];
+  for (let key in object) {
+    arr.push(object[key]);
+  }
+  return arr;
 };
